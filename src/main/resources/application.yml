@@ -39,5 +39,6 @@ cloud:
       static: ap-northeast-1
 onesignal:
   id: ${6fcb22b4-087b-4c29-8b60-65ff2c8cd966}    
-    
+googlemap:
+  key: ${googlemap.key}    
      
