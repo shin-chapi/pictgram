@@ -16,25 +16,17 @@
 }
 </style>
 		<script th:inline="javascript">
-			function initMap() {
-				/* new google.maps.Map(document.getElementById("map"), {
-					center : {
-						lat : -34.397,
-						lng : 150.644
-					},
-					zoom : 8,
-				}); */
-				
-				 /*[# th:each="topic : ${list}"]*/
-				 /*[# th:if="${topic.latitude != null and topic.longitude != null}"]*/
-				   new google.maps.Map(document.getElementById("map[[${topic.id}]]"), {
-				       center: { lat: [[${topic.latitude}]], lng: [[${topic.longitude}]]},
-				       zoom: 16,
-				   });
-				 /*[/]*/
-				 /*[/]*/
-			}
-		</script>
+  function initMap() {
+  /*[# th:each="topic : ${list}"]*/
+  /*[# th:if="${topic.latitude != null and topic.longitude != null}"]*/
+    new google.maps.Map(document.getElementById("map[[${topic.id}]]"), {
+        center: { lat: [[${topic.latitude}]], lng: [[${topic.longitude}]] 　　　　　},
+        zoom: 16,
+    });
+  /*[/]*/
+  /*[/]*/
+  }
+</script>
 		<div class="container">
 			<div class="row" th:each="topic : ${list}">
 				<a th:id="${topic.id}"></a>
